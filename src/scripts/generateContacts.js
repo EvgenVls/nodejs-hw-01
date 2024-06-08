@@ -15,7 +15,7 @@ const generateContacts = async (number) => {
 
     const allContacts = currentContacts.concat(newContacts);
 
-    await fs.writeFile(PATH_DB, JSON.stringify(allContacts), 'utf-8');
+    await fs.writeFile(PATH_DB, JSON.stringify(allContacts, null, 2), 'utf-8');
   } catch (error) {
     console.error('Помилка додавання(читання) даних:', error);
   }
